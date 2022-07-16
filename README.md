@@ -1,2 +1,2 @@
 <h1>clock </h1>
-<img src="https://jemai-sameh.github.io/Clock/"  alt="clock demo" />
+<iframe src="https://github.com/jemai-sameh/Clock/blob/master/index.html"></iframe>
