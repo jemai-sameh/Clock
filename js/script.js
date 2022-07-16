@@ -6,7 +6,7 @@ const dateTimeSecond = document.querySelector('#second');
 const dateTimeHour = document.querySelector('#hour');
 const dateTimeMinute = document.querySelector('#minute');
 
-var audio = new Audio('./sound/clock-ticking-2.mp3');
+/*var audio = new Audio('./sound/tink.wav');*/
 
 var monthNames = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ]; 
 var dayNames= ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
@@ -35,7 +35,10 @@ const setStyle=()=>{
     let clockDayTime=setDateTime(currentDate)
 
     secondHand.style.transform = `rotate(${clock.second}deg)`;
+    const audio = document.querySelector(`audio`);
+    if (audio) {
     audio.play();
+    }
     minuteHand.style.transform = `rotate(${clock.minute}deg)`;
     hourHand.style.transform = `rotate(${clock.hour}deg)`;
 }
