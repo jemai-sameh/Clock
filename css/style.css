@@ -1,15 +1,15 @@
 :root {
-    --blue: rgb(27, 27, 87) ;
+    --blue: rgb(27, 27, 87);
     --white: #ffffff;
-    --violet:#c6b7e5;
-    --rose:#9d62e5;
+    --violet: #c6b7e5;
+    --rose: #9d62e5;
 }
 
-body{
+body {
     background-color: #c6b7e5;
 }
 
-.clock{
+.clock {
     border: 8px var(--blue) solid;
     width: 20rem;
     height: 20rem;
@@ -17,11 +17,11 @@ body{
     padding: .7rem;
     margin: auto;
     margin-top: 50px;
-    box-shadow: -3px -3px 5px var(--blue),inset  -3px -3px 10px var(--blue);
+    box-shadow: -3px -3px 5px var(--blue), inset -3px -3px 10px var(--blue);
 
 }
 
-.outClockFace{
+.outClockFace {
     position: relative;
     background: var(--blue);
     overflow: hidden;
@@ -34,10 +34,10 @@ body{
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
     transform: rotate(90deg)
-  }
-  
-  .outClockFace::after,
-  .outClockFace::before{
+}
+
+.outClockFace::after,
+.outClockFace::before {
     content: '';
     background: var(--rose);
     position: absolute;
@@ -46,47 +46,50 @@ body{
     left: 49%;
 }
 
-.outClockFace .face{
+.outClockFace .face {
 
     position: absolute;
-   width: 3.5px;
+    width: 3.5px;
     height: 100%;
     background: #e0dbe6;
     left: 49%;
 }
+
 .outClockFace .face.face-one {
     -webkit-transform: rotate(30deg);
     -moz-transform: rotate(30deg);
     transform: rotate(30deg)
-  }
-  
-  .outClockFace .face.face-two {
+}
+
+.outClockFace .face.face-two {
     -webkit-transform: rotate(60deg);
     -moz-transform: rotate(60deg);
     transform: rotate(60deg)
-  }
-  
-  .outClockFace .face.face-three {
+}
+
+.outClockFace .face.face-three {
     -webkit-transform: rotate(120deg);
     -moz-transform: rotate(120deg);
     transform: rotate(120deg)
-  }
-  .outClockFace .face.face-four {
+}
+
+.outClockFace .face.face-four {
     -webkit-transform: rotate(150deg);
     -moz-transform: rotate(150deg);
     transform: rotate(150deg)
-  }
+}
 
-.HandClockFace{
-    background-color: var(--blue); 
+.HandClockFace {
+    background-color: var(--blue);
     margin: auto;
-    position: absolute; 
-    top: 80px;  
+    position: absolute;
+    top: 80px;
     width: 17.5rem;
     height: 17.5rem;
     margin-left: 15px;
     border-radius: 100%;
 }
+
 .HandClockFace::before {
     content: '';
     position: absolute;
@@ -101,31 +104,57 @@ body{
 }
 
 
-.HandClockFace .hand{
+.HandClockFace .hand {
     width: 50%;
     right: 50%;
     height: 6px;
     background: var(--rose);
     position: absolute;
     top: 50%;
-    border-radius: 6px;    
+    border-radius: 6px;
     transform-origin: 100%;
     transform: rotate(90deg);
-   transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
 }
+
 .hand.hour-hand {
     width: 30%;
     z-index: 3;
-  }
-  
-  .hand.minute-hand {
+}
+
+.hand.minute-hand {
     height: 3px;
     z-index: 10;
     width: 40%;
-  }
-  
-  .hand.second-hand {
+}
+
+.hand.second-hand {
     background: #f0cc00;
     width: 45%;
     height: 2px;
-  }
+}
+
+.dateTime {
+    margin: 50px auto;
+    color: var(--blue);
+}
+
+.Date {
+    font-size: 36px;
+    text-align: center;
+    text-shadow: 0 0 5px var(--rose);
+}
+
+
+ul {
+    margin: 0 auto;
+    list-style: none;
+    text-align: center;
+}
+
+ul li {
+    display: inline;
+    font-size: 10em;
+    text-align: center;
+    text-shadow: 0 0 5px var(--white);
+}
