@@ -1,12 +1,14 @@
 const secondHand = document.querySelector('.second-hand');
 const minuteHand = document.querySelector('.minute-hand');
 const hourHand = document.querySelector('.hour-hand');
+const dateTime = document.querySelector('.date');
+
 let setDate=()=>{
     const currentDate=new Date();
     return {
-        hour: ((currentDate.getHours() / 12) * 360) + ((currentDate.getMinutes()/60)*30) + 90,
-        minute: ((currentDate.getMinutes() / 60) * 360) + ((currentDate.getSeconds()/60)*6) + 90,
-        second: ((currentDate.getSeconds() / 60) * 360) + 90
+        hour: currentDate.getHours()*30 + ((currentDate.getMinutes()/2)) + 90,
+        minute: currentDate.getMinutes() *6 + 90,
+        second: currentDate.getSeconds() * 6 + 90
     }
 
 }
@@ -19,3 +21,6 @@ const setStyle=()=>{
 }
 
 setInterval(setStyle, 1000);
+
+
+
